@@ -15,4 +15,19 @@
     * Repeat Retailer, Used Chip Card, Used Pin Number, Online Order: Binary (0 or 1).
  ##### Click "Submit".
 
+### Application Structure 
+
+fraud_app/
+├── .fraud/                  # Virtual environment
+├── static/
+│   └── styles/
+│       └── style.css        # Basic CSS styling
+├── templates/
+│   ├── index.html           # Form page
+│   └── transaction.html     # Result page
+├── fraud_model.pkl          # Pre-trained model
+├── transaction_log.csv      # Log file (created on first run)
+├── server.py                # Flask app
+└── README.md                # This file
+
 [Fraud-Detection-Application](https://fraud-detection-knd8.onrender.com)
