@@ -18,7 +18,7 @@
 ### Application Structure 
 
 * fraud_app/
-* ├── .fraud/                  # Virtual environment
+* ├── .fraud/                  *# Virtual environment
 * ├── static/
 * │   └── styles/
 * │       └── style.css        # Basic CSS styling
