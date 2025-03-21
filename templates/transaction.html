@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ title }}</h1>
+        <p>Transaction Result: 
+            <span class="status {% if status == 'Legitimate' %}status-legitimate{% else %}status-fraudulent{% endif %}">
+                {{ status }}
+            </span>
+        </p>
+        <h2>Input Data</h2>
+        <ul>
+            {% for field, value in inputs.items() %}
+                <li>{{ field.replace('_', ' ').title() }}: {{ value }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('index') }}" class="back-button">Enter another Transaction Detail</a>
+    </div>
+</body>
+</html>
